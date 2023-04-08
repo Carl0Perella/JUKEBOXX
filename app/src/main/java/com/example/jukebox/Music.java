@@ -183,12 +183,14 @@ public class Music extends AppCompatActivity {
             "Stromae"
     };
     public void indietro(View view) {
+        player.pause();
         Intent Activityindietro = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(Activityindietro);
 
     }
 
     public void Youtube(View view){
+        player.pause();
         Intent youTube = new Intent(Intent.ACTION_VIEW, Uri.parse(link[Randomnum]));
         startActivity(youTube);
     }
