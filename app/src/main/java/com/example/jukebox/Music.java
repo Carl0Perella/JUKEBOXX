@@ -22,9 +22,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-
-
 public class Music extends AppCompatActivity {
     ImageView image;
     Button youtube;
@@ -50,7 +47,7 @@ public class Music extends AppCompatActivity {
         Button Notifica= findViewById(R.id.Notifica);
         musicbar =(SeekBar) findViewById(R.id.bar);
         Button Pause= findViewById(R.id.Pause);
-        Button Stop= findViewById(R.id.Stop);
+        Button Testo= findViewById(R.id.Testo);
         Button Play= findViewById(R.id.Play);
         image= findViewById(R.id.imageview);
         clicks = getIntent().getExtras().getInt("click");
@@ -81,9 +78,11 @@ public class Music extends AppCompatActivity {
     {
         player.pause();
     }
-    public void stop(View v)
+    public void Testo(View v)
     {
-        player.stop();
+        Intent Testo = new Intent(getApplicationContext(), Testo.class);
+        Testo.putExtra("NumeroText", Randomnum);
+        startActivity(Testo);
     }
 
 
@@ -91,22 +90,22 @@ public class Music extends AppCompatActivity {
 
 
     String[] Musica = {
-            "My heart is cold",
-            "Livin’on a player",
-            "Eye of the tiger",
-            "Car’s outside",
-            "La cumbia de free fire",
+            "Jackie Chan",
+            "That's What I like",
+            "Eye of the Tiger",
+            "Car’s Outside",
+            "All Stars",
             "Paranoid",
-            "Black in black",
-            "Out of my league",
+            "Back In Black",
+            "Out Of My League",
             "Fearless",
-            "Gipsy woman",
+            "Gipsy Woman",
             "Snap",
             "Hero",
-            "Get lucky",
-            "As it was",
-            "Safe and sound",
-            "Tous le memes"
+            "Get Lucky",
+            "As It Was",
+            "Safe And Sound",
+            "Tous le Memes"
     };
     int[] Audio = {
             R.raw.music1,
@@ -142,15 +141,15 @@ public class Music extends AppCompatActivity {
             R.drawable.img_13,
             R.drawable.img_14,
             R.drawable.img_15,
-            R.drawable.img_16,
+            R.drawable.img_16
     };
 
     String[] link = {
-            "https://youtu.be/OvkOOxklAKE",
-            "https://youtu.be/ohFtQIPqGSo",
+            "https://youtu.be/x09D_WCmEY0",
+            "https://youtu.be/b64jBOht8MU",
             "https://youtu.be/_qDML_BCju8",
             "https://youtu.be/BxPaGW55PUo",
-            "https://youtu.be/WoYQDX2a14o",
+            "https://youtu.be/aT5JaB5agSE",
             "https://youtu.be/0qanF-91aJo",
             "https://youtu.be/pAgnJDJN4VA",
             "https://youtu.be/I-QmZpLWjHc",
@@ -165,11 +164,11 @@ public class Music extends AppCompatActivity {
     };
 
     String[] Artista= {
-            "Bad history",
-            "Bon Jovi",
+            "Tiësto & Dzeko",
+            "Bruno Mars",
             "Survivor",
             "James arthur",
-            "Bukano",
+            "Smash Mouth",
             "Black Sabbath",
             "AC DC",
             "Fits and the tantrums",

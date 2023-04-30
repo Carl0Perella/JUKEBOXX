@@ -46,11 +46,11 @@
         app:layout_constraintVertical_bias="0.850" />
 
     <Button
-        android:id="@+id/Stop"
+        android:id="@+id/Testo"
         android:layout_width="110dp"
         android:layout_height="55dp"
-        android:onClick="stop"
-        android:text="Stop"
+        android:onClick="Testo"
+        android:text="Testo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.90"
