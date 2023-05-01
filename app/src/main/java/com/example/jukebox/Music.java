@@ -81,6 +81,7 @@ public class Music extends AppCompatActivity {
     public void Testo(View v)
     {
         Intent Testo = new Intent(getApplicationContext(), Testo.class);
+        Testo.putExtra("clickText", clicks);
         Testo.putExtra("NumeroText", Randomnum);
         startActivity(Testo);
     }

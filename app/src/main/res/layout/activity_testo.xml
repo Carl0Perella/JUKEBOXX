@@ -6,29 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".Testo">
 
-    <TextView
-        android:id="@+id/texto"
-        android:layout_width="400dp"
-        android:layout_height="550dp"
-        android:gravity="center_vertical"
-        android:text="Testo"
+
+    <HorizontalScrollView
+        android:layout_width="350dp"
+        android:layout_height="450dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088" />
+        app:layout_constraintVertical_bias="0.608">
+
+
+        <TextView
+            android:id="@+id/texto"
+            android:layout_width="400dp"
+            android:layout_height="450dp"
+            android:gravity="center_horizontal"
+            android:text="Testo"
+
+            />
+
+    </HorizontalScrollView>
 
     <Button
 
         android:id="@+id/indietro2"
         android:layout_width="155dp"
-        android:onClick="indietro2"
         android:layout_height="50dp"
+        android:onClick="indietro2"
         android:text="Indietro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.913" />
+        app:layout_constraintVertical_bias="0.07" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

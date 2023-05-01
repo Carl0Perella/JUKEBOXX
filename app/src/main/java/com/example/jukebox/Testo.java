@@ -1,7 +1,7 @@
 package com.example.jukebox;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.text.method.ScrollingMovementMethod;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -26,6 +26,7 @@ public class Testo extends AppCompatActivity {
     Button indietro2;
     int Numtext;
     final String TAG = "Testo";
+    int clickss;
     String[] Testi = {
             "testo1.txt",
             "testo2.txt",
@@ -51,6 +52,7 @@ public class Testo extends AppCompatActivity {
         setContentView(R.layout.activity_testo);
         testo = findViewById(R.id.texto);
         Numtext = getIntent().getExtras().getInt("NumeroText");
+        clickss = getIntent().getExtras().getInt("clickText");
         indietro2= findViewById(R.id.indietro2);
         testo.setMovementMethod(new ScrollingMovementMethod());
         testo.setText(leggiTesto(Numtext, getApplicationContext()));
@@ -80,7 +82,6 @@ public class Testo extends AppCompatActivity {
     }
 
     public void indietro2(View view) {
-        Intent intentIndietro2 = new Intent(getApplicationContext(), Music.class);
-        startActivity(intentIndietro2);
+        finish();
     }
 }
